@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dokumentace semestrální práce</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header>
+            <h1>Dokumentace semestrální práce z předmětu Značkovací jazyky</h1>
+            <nav>
+                <a href="/">Domů</a>
+                <a href="/o nás">O nás</a>
+                    
+            </nav>
+        </header>
+        <main>
+            <article>
+                <header>
+                    <h2>Obsah</h2>
+                    <nav>
+                        <ol>
+                            <li><a href="#uvod">Úvod</a></li>
+                            <li><a href="#metodika">Metodika</a></li>
+                            <li><a href="#popis-elementu-a-atributu">Popis elementů a atributů</a></li>
+                            <li><a href="#popis-transformace">Popis transformace</a></li>
+                            <li><a href="#zaver">Závěr </a></li>
+                            <li><a href="#paticka">Patička </a></li>
+                        </ol>
+                    </nav>
+                    <section id="uvod">
+                        <h2>Úvod</h2>
+			<p>
+                            Semestrální práce z předmětu "Značkovací jazyky" se zabývá tvorbou XML dokumentu popisujícího soubor do kterého smyšlená aplikace ukládá svá nastavení. Součástí je také tvorba XSD schéma, XSL transformace do JSNO a tato dokumentace. Dokument byl tvořen jako konfigurační soubor hudebního přehrávače.
+			</p>
+                    </section>
+                    <section id="metodika">                 
+                       <h2>Metodika</h2>
+					<p>Všechny dokumenty byly vytvořeny v programu <i>netbeans</i>.</p>
+					<p>
+						Nejprve byl vytvořen hrubý XML dokument se jmény elementů a atributů. Ten byl následně ručně konverttován do XSD podoby.
+			
+					<p>
+						Validita těchto dvou dokumentů byla zkontrolována pomocí <a href="http://www.utilities-online.info/xsdvalidation/">webového validátoru </a>. Zároveň bylo zkontrolováno, že XML dokument odpovídá XSD schématu.
+					</p>
+
+					<p>
+						XSL transformace do JSON byla psána ručně. Data jsou strukturována do JSON tabulek podle kategorií vyplývajících z designu XSD dokumentu. Do XML dokumentu byl doplněn odkaz na tuto transformaci. Při testování bylo zjištěno že prohlížeče Google Chrome ani Opera neumí s transformacemi pracovat (zobrazí prázdnou stránku). Transformace od JSON neobsahuje všechna data z XML souboru.
+					</p>				
+
+					<p>
+						Celý projekt byl v průběhu jeho tvorby postupně nahráván (a verzován) na <a href="https://github.com/rancor1223/znackovaci_jazyky_czu">GitHubu</a>.
+					</p>
+                    </section>
+                    <section id="popis-elementu-a-atributu">
+                        <h2>Popis elementů a atributů</h2>
+                        <p></p><table border="1">
+						<tr>
+							<th>Adresa elementu/atributu</th>
+							<th>Popis</th>
+						</tr>
+						<tr>
+							<td>Prehravac/uzivatel/Jmeno</td>
+							<td>Jmeno uzivatele</td>
+						</tr>
+						<tr>
+							<td>Prehravac/uzivatel/Prijmeni</td>
+                                                        <td>Prijmeni uzivatele</td>
+						</tr>
+						<tr>
+							<td>Prehravac/uzivatel/pocet-skladeb</td>
+							<td>Pocet skladeb</td>
+						</tr>
+						<tr>
+							<td>Prehravac/uzivatel//naposledy-prehrano</td>
+							<td>Naposledy prehrano</td>
+						</tr>
+						<tr>
+							<td>Prehravac/uzivatel/naposledy-pridano</td>
+							<td>Naposledy pridano.</td>
+						</tr>
+						<tr>
+							<td>Prehravac/uzivatel/oblibena-skladba</td>
+							<td>Oblibena skladba</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/jazyk</td>
+							<td>Jazyk</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/velikost-okna</td>
+							<td>Velikost okna</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/barva-pozadi</td>
+							<td>Barva pozadi UI</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/barva-pisma</td>
+							<td>Barva pisma</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/seradit-podle</td>
+							<td>Seradit podle</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/rozlozeni</td>
+							<td>Rozlozeni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/napoveda</td>
+							<td>Napoveda</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/prehravani/zapnout-opakovani</td>
+							<td>Zapnout opakovani</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/prehravani/nahodne-prehravani</td>
+							<td>Nahodne prehravani</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/prehravani/ztlumit</td>
+							<td>Ztlumit</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/prehravani/hlasitost</td>
+							<td>Hlasitost</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/prehravani/vizualizer</td>
+							<td>Vizualizer</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/prehravani/prehrat-vse</td>
+							<td>Prehrat vse</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/prehravani/promitani-fotografii</td>
+							<td>Promitani fotografii</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/rozsirene-nastaveni/vysky</td>
+							<td>Vysky</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/rozsirene-nastaveni/stredy</td>
+							<td>Stredy</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/rozsirene-nastaveni/basy</td>
+							<td>Basy</td>
+						</tr>
+						<tr>
+							<td>Prehravac/vychozi-nastaveni/rozsirene-nastaveni/vyvazeni</td>
+							<td>Vyvazeni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/Jmeno</td>
+							<td>Jmeno</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/Prijmeni</td>
+							<td>Prijmeni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/Vek</td>
+							<td>Vek</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/Datum-narozeni</td>
+							<td>Datum narozeni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/Zeme-puvodu</td>
+							<td>Zeme puvodu</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/oceneni</td>
+							<td>Oceneni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/oceneni</td>
+							<td>Oceneni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/instrumenty</td>
+                                        		<td>Instrumenty</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/aktivni-roky</td>
+							<td>Aktivni roky</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/zanry</td>
+							<td>Zanry</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/prezdivka</td>
+							<td>Prezdivka</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/nahravaci-studio</td>
+							<td>Nahravaci studio</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/nejznamejsi-track</td>
+							<td>Nejznamejsi track</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/clenove-kapely</td>
+							<td>Clenove kapely</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/nazev</td>
+							<td>Nazev</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/album</td>
+							<td>Album</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/delka</td>
+							<td>Delka</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/velikost-souboru</td>
+							<td>Velikost souboru</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/hodnoceni</td>
+							<td>Hodnoceni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/datum-vytvoreni</td>
+							<td>Datum vytvoreni</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/datum-zmeny</td>
+							<td>Datum zmeny</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/zanr</td>
+							<td>Zanr</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/cesta-ke-sloze</td>
+							<td>Cesta ke sloze</td>
+						</tr>
+						<tr>
+							<td>Prehravac/Hudba/Autor/format</td>
+							<td>Format</td>
+						</tr>
+					</table>
+                    </section>
+                    <section id="popis-transformace">
+                        <h2>Popis transformace</h2>
+                	<h3>HTML</h3>
+			<p>
+                            Data jsou transformována do HTML dokumentu. Jsou strukturována tak, jak by typicky bylo strukturováno menu Nastavení. Všechny atributy "enabled" jsou zabaleny v podmínkách, přes které se přepisují z true/false na On/Off. Transformace od HTML neobsahuje všechna data z XML souboru.
+			</p>
+                    </section>
+                    <section id="zaver">
+                        <h2>Závěr</h2>
+			<p>
+                            Jazyk XML je používán pro strukturované ukládání dat nebo při komunikaci mezi programy. Jeho výhodou je dobrá čitelnost a šikoké možnosti filtrování a omezování dat a datovýh typů. Práce s ním je také snadná, protože k jeho editaci stačí pouze textový editor.
+			</p>
+                    </section>
+                </header>
+                <footer>
+                      <hr>
+			<table>
+				<tr>
+					<td>Cvičení:</td>
+					<td>Čtvrtek 14:00 Lichý</td>
+				</tr>
+			</table>         
+                </footer>
+                <aside>
+                    <h2>Informace o předmětu</h2>
+                    Název: Značkovací jazyky.
+                    Vyučující: Ing. Jan Masner                              
+                </aside>  
+            </article>
+        </main>
+        <footer id="paticka"> 
+            <p> Copyright &copy; Autor:Dohnal Tomáš</p>
+        </footer>
+    </body>
+</html>

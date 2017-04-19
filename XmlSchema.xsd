@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="Prehravac">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="uzivatel" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Jmeno">
+                                 <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                          <xs:pattern value="[a-zA-Z0-9]{0,16}"/>
+                                      </xs:restriction>
+                                 </xs:simpleType>
+                            </xs:element>   
+                            <xs:element name="Prijmeni">
+                                 <xs:simpleType>
+                                      <xs:restriction base="xs:string">
+                                          <xs:pattern value="[a-zA-Z0-9]{0,16}"/>
+                                      </xs:restriction>
+                                 </xs:simpleType>                              
+                            </xs:element>  
+                            <xs:element name="pocet-skladeb" type="xs:string"
+                            minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="naposledy-prehrano" type="xs:string"/>
+                            <xs:element name="naposledy-pridano" type="xs:string"/>
+                            <xs:element name="oblibena-skladba" type="xs:string"/>                  
+                         </xs:sequence>                                      
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="vychozi">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="jazyk" default="CZ">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="CZ"/>
+					<xs:enumeration value="EN"/>
+					<xs:enumeration value="DE"/>
+                                        <xs:enumeration value="FR"/>
+                                    </xs:restriction>
+                                </xs:simpleType>                                                               
+                            </xs:element>
+                            <xs:element name="velikost-okna" default="720x480">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="720x480"/>
+					<xs:enumeration value="1920x1080"/>
+					<xs:enumeration value="1280x720"/>
+                                    </xs:restriction>
+                                </xs:simpleType>                                                               
+                            </xs:element>
+                            <xs:element name="barva-pozadi" default="cerna">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="bila"/>
+					<xs:enumeration value="modra"/>
+					<xs:enumeration value="cervena"/>
+                                        <xs:enumeration value="zelena"/>
+                                        <xs:enumeration value="zluta"/>
+                                        <xs:enumeration value="cerna"/>
+                                    </xs:restriction>
+                                </xs:simpleType>                                                               
+                            </xs:element>
+                             <xs:element name="barva-pisma" default="bila">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="bila"/>
+					<xs:enumeration value="modra"/>
+					<xs:enumeration value="cervena"/>
+                                        <xs:enumeration value="zelena"/>
+                                        <xs:enumeration value="zluta"/>
+                                        <xs:enumeration value="cerna"/>
+                                    </xs:restriction>
+                                </xs:simpleType>                                                               
+                            </xs:element>
+                            <xs:element name="seradit-podle" default="data">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="data"/>
+					<xs:enumeration value="velikosti"/>
+					<xs:enumeration value="delky"/>
+                                        <xs:enumeration value="abecedy"/>
+                                    </xs:restriction>
+                                </xs:simpleType>                                                               
+                            </xs:element>
+                            <xs:element name="rozlozeni">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+					<xs:enumeration value="kachle"/>
+					<xs:enumeration value="ikony"/>
+                                        <xs:enumeration value="sloupce"/>
+                                    </xs:restriction>
+                                </xs:simpleType> 
+                            </xs:element>
+                            <xs:element name="napoveda">
+					<xs:complexType>
+						<xs:attribute type="xs:boolean" name="enabled"/>
+					</xs:complexType>
+                            </xs:element>   
+                            <xs:element name="prehravani">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                         <xs:element name="zapnout-opakovani">
+                                            <xs:complexType>
+						<xs:attribute type="xs:boolean" name="enabled"/>
+                                            </xs:complexType>
+                                         </xs:element>
+                                         <xs:element name="nahodne-prehravani">
+                                            <xs:complexType>
+						<xs:attribute type="xs:boolean" name="enabled"/>
+                                            </xs:complexType>
+                                         </xs:element>
+                                         <xs:element name="ztlumit">
+                                            <xs:complexType>
+						<xs:attribute type="xs:boolean" name="enabled"/>
+                                            </xs:complexType>
+                                         </xs:element>
+                                         <xs:element name="hlasitost">
+                                            <xs:simpleType>
+                                                 <xs:restriction base="xs:nonNegativeInteger">
+                                                    <xs:maxInclusive value="100"/>
+                                                 </xs:restriction>
+                                            </xs:simpleType>   
+                                         </xs:element> 
+                                         <xs:element name="vizualizer">
+                                            <xs:complexType>
+						<xs:attribute type="xs:boolean" name="enabled"/>
+                                            </xs:complexType>
+                                         </xs:element>
+                                         <xs:element name="prehrat-vse">
+                                            <xs:complexType>
+						<xs:attribute type="xs:boolean" name="enabled"/>
+                                            </xs:complexType>
+                                         </xs:element>
+                                         <xs:element name="promitani-fotografii">
+                                            <xs:complexType>
+						<xs:attribute type="xs:boolean" name="enabled"/>
+                                            </xs:complexType>
+                                         </xs:element> 
+                                    </xs:sequence>
+                                </xs:complexType>                      
+                     </xs:element>
+                            <xs:element name="rozsirene-nastaveni">
+                                 <xs:complexType>
+                                     <xs:sequence>
+                                         <xs:element name="vysky">
+                                                    <xs:simpleType>
+							<xs:restriction base="xs:nonNegativeInteger">
+								<xs:maxInclusive value="10"/>
+							</xs:restriction>
+                                                    </xs:simpleType>
+                                         </xs:element>
+                                         <xs:element name="stredy">
+                                                    <xs:simpleType>
+							<xs:restriction base="xs:nonNegativeInteger">
+								<xs:maxInclusive value="10"/>
+							</xs:restriction>
+                                                    </xs:simpleType>
+                                         </xs:element>
+                                         <xs:element name="basy">
+                                                    <xs:simpleType>
+							<xs:restriction base="xs:nonNegativeInteger">
+								<xs:maxInclusive value="10"/>
+							</xs:restriction>
+                                                    </xs:simpleType>
+                                         </xs:element>
+                                         <xs:element name="vyvazeni">
+                                                    <xs:simpleType>
+							<xs:restriction base="xs:nonNegativeInteger">
+								<xs:maxInclusive value="10"/>
+							</xs:restriction>
+                                                    </xs:simpleType>
+                                         </xs:element>
+                                     </xs:sequence>
+                                 </xs:complexType>
+                             </xs:element>
+                          </xs:sequence>
+                     </xs:complexType>
+                </xs:element>                                      
+                                         <xs:element name="autor" maxOccurs="unbounded" minOccurs="0">
+                                             <xs:complexType>
+                                                 <xs:sequence>
+                                                    <xs:element name="Jmeno">
+                                                        <xs:simpleType>
+                                                              <xs:restriction base="xs:string">
+                                                                <xs:pattern value="[a-zA-Z0-9]{0,16}"/>
+                                                              </xs:restriction>
+                                                         </xs:simpleType>
+                                                       </xs:element>   
+                                                       <xs:element name="Prijmeni">
+                                                         <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:pattern value="[a-zA-Z0-9]{0,16}"/>
+                                                            </xs:restriction>
+                                                         </xs:simpleType>                              
+                                                       </xs:element>  
+                             
+                                                     <xs:element name="Vek">
+                                                        <xs:simpleType>
+										<xs:restriction base="xs:integer">
+											<xs:minInclusive value="0"/>
+											<xs:maxInclusive value="150"/>
+										</xs:restriction>                    
+                                                        </xs:simpleType>     
+                                                    </xs:element>
+                                                   <xs:element name="Datum-narozeni" type="xs:string"/>
+                                                   <xs:element name="Zeme-puvodu" type="xs:string"/>
+                                                   <xs:element name="oceneni" type="xs:string"/>
+                                                   <xs:element name="website" type="xs:string"/>
+                                                   <xs:element name="instrumenty" type="xs:string"/>
+                                                   <xs:element name="aktivni-roky" type="xs:string"/>
+                                                   <xs:element name="zanry" type="xs:string"/>
+                                                   <xs:element name="prezdivka" type="xs:string"/>
+                                                   <xs:element name="nahravaci-studio" type="xs:string"/>
+                                                   <xs:element name="kapela" type="xs:string"/>
+                                                   <xs:element name="clenove-kapely" type="xs:string"/>
+                                                   <xs:element name="nejznamejsi-track" type="xs:string"/>
+                                                  </xs:sequence>
+                                                  <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                                             </xs:complexType>                                         
+                                           </xs:element>
+              <xs:element name="hudba" maxOccurs="unbounded" minOccurs="0">
+                           <xs:complexType>
+                                <xs:sequence>
+                                         <xs:element name="nazev" type="xs:string"/>
+                                         <xs:element name="album" type="xs:string"/>
+                                         <xs:element name="delka" type="xs:string"/>
+                                         <xs:element type="xs:string" name="velikost-souboru"/>
+                                         <xs:element name="hodnoceni">
+								<xs:simpleType>
+									<xs:restriction base="xs:integer">
+										<xs:minInclusive value="0"/>
+										<xs:maxInclusive value="5"/>
+									</xs:restriction>
+								</xs:simpleType>
+                                         </xs:element>
+                                         <xs:element name="datum-vytvoreni" type="xs:string"/>
+                                         <xs:element name="datum-zmeny" type="xs:string"/>
+                                         <xs:element name="zanr" type="xs:string"/>
+                                         <xs:element name="cesta-ke-slozce" type="xs:string" />
+                                         <xs:element name="format">
+                                             <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                	<xs:enumeration value="mp3"/>
+                                                        <xs:enumeration value="mp4"/>
+                                                    	<xs:enumeration value="WAV"/>
+                                                        <xs:enumeration value="MIDI"/>
+                                                    </xs:restriction>
+                                             </xs:simpleType>                                                               
+                                        </xs:element>                                                   
+                                </xs:sequence>
+                                <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
+                             </xs:complexType>     
+                </xs:element>
+               </xs:sequence>
+             </xs:complexType>
+            </xs:element>
+                                                                                                                                                                    
+
+</xs:schema>
+
+                            
+                           

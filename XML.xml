@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prehravac xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XmlSchema.xsd">
+ <uzivatel>
+    <Jmeno>Alexandr</Jmeno>
+    <Prijmeni>Veliky</Prijmeni>
+    <pocet-skladeb>126</pocet-skladeb>
+    <naposledy-prehrano>Zustanu-svuj</naposledy-prehrano>
+    <naposledy-pridano>Byt-stale-mlad</naposledy-pridano>
+    <oblibena-skladba>Bila-Orchidej</oblibena-skladba>
+ </uzivatel>
+ <uzivatel>
+    <Jmeno>Natalie</Jmeno>
+    <Prijmeni>Bila</Prijmeni>
+    <pocet-skladeb>7</pocet-skladeb>
+    <naposledy-prehrano>Bila-Noc</naposledy-prehrano>
+    <naposledy-pridano>Haleluja</naposledy-pridano>
+    <oblibena-skladba>Arakain</oblibena-skladba>
+  </uzivatel>
+  <vychozi>
+      <jazyk>CZ</jazyk>
+      <velikost-okna>720x480</velikost-okna>
+      <barva-pozadi>cerna</barva-pozadi>
+      <barva-pisma>bila</barva-pisma>
+      <seradit-podle>data</seradit-podle>
+      <rozlozeni>sloupce</rozlozeni>
+      <napoveda enabled="true" />
+        <prehravani>
+          <zapnout-opakovani enabled = "false" />
+          <nahodne-prehravani enabled= "false" />
+          <ztlumit enabled= "false" />
+          <hlasitost>50</hlasitost>
+          <vizualizer enabled= "true" />
+          <prehrat-vse enabled="true"/>
+          <promitani-fotografii enabled="false"/>
+        </prehravani>
+        <rozsirene-nastaveni>
+          <vysky>7</vysky>
+          <stredy>5</stredy>
+          <basy>0</basy>
+          <vyvazeni>1</vyvazeni>
+        </rozsirene-nastaveni>
+  </vychozi>
+      <autor id="1">
+        <Jmeno>Petr</Jmeno>
+        <Prijmeni>Vysoky</Prijmeni>
+        <Vek>37</Vek>
+        <Datum-narozeni>18.5.1980</Datum-narozeni>
+        <Zeme-puvodu>Belgie</Zeme-puvodu>
+        <oceneni>Belg-Awards</oceneni>
+        <website>BelgPetr.be</website>
+        <instrumenty>housle</instrumenty>
+        <aktivni-roky>2000-2006</aktivni-roky>
+        <zanry>country</zanry>
+        <prezdivka>High-Belg</prezdivka>
+        <nahravaci-studio>zadne </nahravaci-studio>
+        <kapela>Petri</kapela>
+        <clenove-kapely>Julius-a-Markus</clenove-kapely>
+        <nejznamejsi-track>Jedu-na-Zapad</nejznamejsi-track>
+      </autor>
+      <autor id="2">
+        <Jmeno>Adam</Jmeno>
+        <Prijmeni>Maly</Prijmeni>
+        <Vek>57</Vek>
+        <Datum-narozeni>1.7.1960</Datum-narozeni>
+        <Zeme-puvodu>Brazilie</Zeme-puvodu>
+        <oceneni>Slavik</oceneni>
+        <website>AMaly.br</website>
+        <instrumenty>kytara</instrumenty>
+        <aktivni-roky>2008-2010</aktivni-roky>
+        <zanry>pop</zanry>
+        <prezdivka>king</prezdivka>
+        <nahravaci-studio>zadne</nahravaci-studio>
+        <kapela>Jelen</kapela>
+        <clenove-kapely>Eva-a-Vasek</clenove-kapely>
+        <nejznamejsi-track>Vychod</nejznamejsi-track>
+      </autor>
+     <hudba id="3"> 
+        <nazev>Poletuchy</nazev>
+        <album>Nahoda</album>
+        <delka>2:15</delka>
+        <velikost-souboru>3200kb</velikost-souboru>
+        <hodnoceni>5</hodnoceni>
+        <datum-vytvoreni>10.3.2013</datum-vytvoreni>
+        <datum-zmeny>15.7.2016</datum-zmeny>
+        <zanr>country</zanr>
+        <cesta-ke-slozce>Knihovny/Hudba</cesta-ke-slozce>
+        <format>mp3</format>
+      </hudba> 
+      <hudba id="4"> 
+        <nazev>Kalibr</nazev>
+        <album>Vitr</album>
+        <delka>4:05</delka>
+        <velikost-souboru>4200kb</velikost-souboru>
+        <hodnoceni>5</hodnoceni>
+        <datum-vytvoreni>12.3.2003</datum-vytvoreni>
+        <datum-zmeny>10.7.1986</datum-zmeny>
+        <zanr>country</zanr>
+        <cesta-ke-slozce>Knihovny/Hudba</cesta-ke-slozce>
+        <format>mp3</format>
+     </hudba> 
+</Prehravac>
